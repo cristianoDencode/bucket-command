@@ -202,6 +202,22 @@ Run the dashboard E2E flow:
 npm run e2e
 ```
 
+## CI/CD
+
+GitHub Actions workflows live in `.github/workflows`.
+
+- `CI` runs on pushes and pull requests to `main`.
+- `CI` installs dependencies with `npm ci`, then runs lint, typecheck, tests, build, and Electron E2E on Linux with `xvfb`.
+- `Release` runs on tags matching `v*` or manually through `workflow_dispatch`.
+- `Release` validates the project and uploads a `.tar.gz` build artifact.
+
+Create a release artifact by pushing a version tag:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
 ## Notes
 
 - `npm run desktop:start` removes `ELECTRON_RUN_AS_NODE` for local Electron runs because some development environments set it automatically.
