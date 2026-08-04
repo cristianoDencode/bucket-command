@@ -1,0 +1,117 @@
+{
+  "name": "bucket-command",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "apps/desktop/dist/main/main.js",
+  "bin": {
+    "bucket-command": "./apps/cli/dist/bin.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "tsc -b && npm run build -w @bucket-command/desktop",
+    "desktop:start": "npm run build && env -u ELECTRON_RUN_AS_NODE electron --no-sandbox apps/desktop",
+    "e2e": "node apps/desktop/e2e/dashboard.e2e.mjs",
+    "lint": "eslint .",
+    "package:linux": "node scripts/package-linux.mjs",
+    "package:win": "electron-builder --win nsis",
+    "quality": "npm run lint && npm run typecheck && npm test && npm run build",
+    "test": "vitest run",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "dependencies": {
+    "@bucket-command/cli": "file:apps/cli",
+    "@bucket-command/desktop": "file:apps/desktop"
+  },
+  "build": {
+    "appId": "bucket-command",
+    "productName": "Bucket Command",
+    "artifactName": "Bucket-Command-${version}-${arch}.${ext}",
+    "compression": "maximum",
+    "directories": {
+      "output": "release"
+    },
+    "electronLanguages": [
+      "en-US",
+      "pt-BR"
+    ],
+    "files": [
+      "apps/desktop/dist/**/*",
+      "!apps/desktop/dist/**/*.map",
+      "!apps/desktop/dist/**/*.d.ts",
+      "!apps/desktop/dist/**/*.d.ts.map",
+      "!apps/desktop/dist/**/*.tsbuildinfo",
+      "apps/desktop/public/**/*",
+      "apps/desktop/package.json",
+      "packages/core/dist/**/*",
+      "!packages/core/dist/**/*.map",
+      "!packages/core/dist/**/*.d.ts",
+      "!packages/core/dist/**/*.d.ts.map",
+      "!packages/core/dist/**/*.tsbuildinfo",
+      "packages/core/package.json",
+      "packages/storage/dist/**/*",
+      "!packages/storage/dist/**/*.map",
+      "!packages/storage/dist/**/*.d.ts",
+      "!packages/storage/dist/**/*.d.ts.map",
+      "!packages/storage/dist/**/*.tsbuildinfo",
+      "packages/storage/package.json",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "apps/desktop/dist/main/main.js"
+    },
+    "npmRebuild": true,
+    "linux": {
+      "target": [
+        "deb"
+      ],
+      "category": "Development",
+      "executableName": "bucket-command",
+      "icon": "build/icons",
+      "syncDesktopName": true
+    },
+    "deb": {
+      "depends": [
+        "libgtk-3-0",
+        "libnotify4",
+        "libnss3",
+        "libxss1",
+        "libxtst6",
+        "xdg-utils",
+        "libatspi2.0-0",
+        "libuuid1",
+        "libsecret-1-0"
+      ],
+      "maintainer": "Cristiano Aquino <cristiano.aquino@libresolucoes.com.br>"
+    }
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3",
+    "eslint": "^10.8.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.65.0",
+    "vite": "^8.1.5",
+    "vitest": "^4.1.10"
+  },
+  "description": "Local documentation and search library for developer commands.",
+  "author": {
+    "name": "Cristiano Aquino",
+    "email": "cristiano.aquino@libresolucoes.com.br"
+  },
+  "homepage": "https://github.com/cristianoDencode/bucket-command",
+  "desktopName": "bucket-command"
+}

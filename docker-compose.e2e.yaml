@@ -1,0 +1,12 @@
+services:
+  desktop-e2e:
+    build:
+      context: .
+      dockerfile: docker/e2e/Dockerfile
+    command: bash -lc "npm ci && npm run build && timeout 240s xvfb-run -a npm run e2e"
+    environment:
+      BUCKET_COMMAND_E2E_ARTIFACT_DIR: /work/test-results/desktop-e2e-docker
+      ELECTRON_DISABLE_SECURITY_WARNINGS: "true"
+    user: node
+    volumes:
+      - .:/work

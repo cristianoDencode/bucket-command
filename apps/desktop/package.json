@@ -1,0 +1,21 @@
+{
+  "name": "@bucket-command/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "build": "vite build --config vite.config.ts && vite build --config vite.preload.config.ts"
+  },
+  "dependencies": {
+    "@bucket-command/core": "file:../../packages/core",
+    "@bucket-command/storage": "file:../../packages/storage",
+    "@monaco-editor/react": "^4.7.0",
+    "lucide-react": "^1.27.0",
+    "monaco-editor": "^0.55.1",
+    "prettier": "^3.9.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sql-formatter": "^15.8.2"
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "format": "bucket-command-library",
+  "version": 1,
+  "exportedAt": "2026-07-28T23:50:32.906Z",
+  "categories": [
+    {
+      "name": "bash-linux",
+      "iconKey": "terminal",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    }
+  ],
+  "commands": [
+    {
+      "title": "Listar arquivos detalhado",
+      "content": "ls -lah",
+      "category": "bash-linux",
+      "alias": "lsfull",
+      "note": "Lista arquivos ocultos com tamanho e permissões",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver permissões de arquivos",
+      "content": "ls -l",
+      "category": "bash-linux",
+      "alias": "perm",
+      "note": "Mostra proprietário, grupo e permissões",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Alterar permissão arquivo executável",
+      "content": "chmod +x arquivo.sh",
+      "category": "bash-linux",
+      "alias": "chmodx",
+      "note": "Adiciona permissão de execução",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Permissão completa arquivo",
+      "content": "chmod 777 arquivo",
+      "category": "bash-linux",
+      "alias": "chmod777",
+      "note": "Dá permissão total (usar com cuidado)",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Permissão segura diretório",
+      "content": "chmod -R 755 diretorio",
+      "category": "bash-linux",
+      "alias": "chmod755",
+      "note": "Define permissão padrão para diretórios",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Alterar proprietário arquivo",
+      "content": "chown usuario:grupo arquivo",
+      "category": "bash-linux",
+      "alias": "owner",
+      "note": "Troca usuário e grupo do arquivo",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Alterar proprietário recursivo",
+      "content": "chown -R usuario:grupo diretorio",
+      "category": "bash-linux",
+      "alias": "owner-r",
+      "note": "Altera dono de toda estrutura",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Encontrar arquivos por nome",
+      "content": "find /caminho -name \"arquivo\"",
+      "category": "bash-linux",
+      "alias": "findname",
+      "note": "Busca arquivo pelo nome",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Encontrar arquivos PHP",
+      "content": "find . -name \"*.php\"",
+      "category": "bash-linux",
+      "alias": "findphp",
+      "note": "Localiza todos arquivos PHP",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Encontrar arquivos grandes",
+      "content": "find / -type f -size +500M 2>/dev/null",
+      "category": "bash-linux",
+      "alias": "bigfiles",
+      "note": "Procura arquivos maiores que 500MB",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Encontrar arquivos modificados hoje",
+      "content": "find . -type f -mtime -1",
+      "category": "bash-linux",
+      "alias": "todayfiles",
+      "note": "Lista arquivos alterados nas últimas 24 horas",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Buscar texto em arquivos",
+      "content": "grep -R \"texto\" .",
+      "category": "bash-linux",
+      "alias": "grep",
+      "note": "Busca conteúdo dentro dos arquivos",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Grep ignorando maiúsculas",
+      "content": "grep -Ri \"texto\" .",
+      "category": "bash-linux",
+      "alias": "grepi",
+      "note": "Busca recursiva sem diferenciar maiúsculas",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Grep mostrando linha",
+      "content": "grep -Rn \"texto\" .",
+      "category": "bash-linux",
+      "alias": "grepline",
+      "note": "Mostra arquivo e número da linha",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Buscar usando find e grep",
+      "content": "find . -type f -name \"*.php\" -exec grep -n \"texto\" {} \\;",
+      "category": "bash-linux",
+      "alias": "findgrep",
+      "note": "Busca texto apenas em determinado tipo de arquivo",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver espaço em disco",
+      "content": "df -h",
+      "category": "bash-linux",
+      "alias": "disk",
+      "note": "Mostra uso das partições",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver tamanho das pastas",
+      "content": "du -sh *",
+      "category": "bash-linux",
+      "alias": "foldersize",
+      "note": "Mostra tamanho dos diretórios atuais",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ordenar pastas por tamanho",
+      "content": "du -sh * | sort -h",
+      "category": "bash-linux",
+      "alias": "sortsize",
+      "note": "Lista diretórios ordenados por tamanho",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver processos ativos",
+      "content": "ps aux",
+      "category": "bash-linux",
+      "alias": "process",
+      "note": "Lista processos em execução",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Buscar processo",
+      "content": "ps aux | grep nome",
+      "category": "bash-linux",
+      "alias": "psgrep",
+      "note": "Localiza processo pelo nome",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Finalizar processo",
+      "content": "kill -9 PID",
+      "category": "bash-linux",
+      "alias": "kill",
+      "note": "Encerra processo pelo PID",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Monitorar processos",
+      "content": "top",
+      "category": "bash-linux",
+      "alias": "top",
+      "note": "Monitoramento em tempo real",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver memória RAM",
+      "content": "free -h",
+      "category": "bash-linux",
+      "alias": "memory",
+      "note": "Mostra uso de memória",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver serviços ativos",
+      "content": "systemctl --type=service --state=running",
+      "category": "bash-linux",
+      "alias": "services",
+      "note": "Lista serviços ativos",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver log serviço",
+      "content": "journalctl -u nome-servico -f",
+      "category": "bash-linux",
+      "alias": "logservice",
+      "note": "Acompanha log em tempo real",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Compactar pasta tar.gz",
+      "content": "tar -czvf arquivo.tar.gz pasta/",
+      "category": "bash-linux",
+      "alias": "tarzip",
+      "note": "Cria compactação gzip",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Extrair tar.gz",
+      "content": "tar -xzvf arquivo.tar.gz",
+      "category": "bash-linux",
+      "alias": "untar",
+      "note": "Extrai arquivo compactado",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Copiar via SSH",
+      "content": "scp arquivo usuario@servidor:/destino",
+      "category": "bash-linux",
+      "alias": "scp",
+      "note": "Copia arquivos para servidor remoto",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Conectar SSH",
+      "content": "ssh usuario@servidor",
+      "category": "bash-linux",
+      "alias": "ssh",
+      "note": "Acessa servidor remoto",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver portas abertas",
+      "content": "ss -tulnp",
+      "category": "bash-linux",
+      "alias": "ports",
+      "note": "Lista portas e processos usando rede",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver histórico comandos",
+      "content": "history | tail -50",
+      "category": "bash-linux",
+      "alias": "history",
+      "note": "Últimos comandos executados",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    }
+  ],
+  "sequences": []
+}

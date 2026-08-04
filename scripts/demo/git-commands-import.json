@@ -1,0 +1,236 @@
+{
+  "format": "bucket-command-library",
+  "version": 1,
+  "exportedAt": "2026-07-28T23:50:32.906Z",
+  "categories": [
+    {
+      "name": "git",
+      "iconKey": "git",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    }
+  ],
+  "commands": [
+    {
+      "title": "Ver histórico de commits",
+      "content": "git log --oneline --graph --decorate --all",
+      "category": "git",
+      "alias": "log",
+      "note": "Mostra histórico resumido com branches e merges",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver diferenças dos arquivos",
+      "content": "git diff",
+      "category": "git",
+      "alias": "diff",
+      "note": "Mostra alterações ainda não commitadas",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Adicionar todos arquivos",
+      "content": "git add .",
+      "category": "git",
+      "alias": "addall",
+      "note": "Adiciona todos os arquivos modificados ao stage",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Criar commit",
+      "content": "git commit -m \"mensagem do commit\"",
+      "category": "git",
+      "alias": "commit",
+      "note": "Cria um commit com mensagem",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Enviar alterações para remoto",
+      "content": "git push",
+      "category": "git",
+      "alias": "push",
+      "note": "Envia commits para o repositório remoto",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Baixar alterações do remoto",
+      "content": "git pull",
+      "category": "git",
+      "alias": "pull",
+      "note": "Atualiza o código local com o remoto",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver branches existentes",
+      "content": "git branch -a",
+      "category": "git",
+      "alias": "branches",
+      "note": "Lista branches locais e remotos",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Criar nova branch",
+      "content": "git checkout -b nome-da-branch",
+      "category": "git",
+      "alias": "newbranch",
+      "note": "Cria e muda para uma nova branch",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Trocar de branch",
+      "content": "git checkout nome-da-branch",
+      "category": "git",
+      "alias": "checkout",
+      "note": "Muda para outra branch",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Atualizar branch principal",
+      "content": "git checkout main && git pull",
+      "category": "git",
+      "alias": "upmain",
+      "note": "Vai para main e atualiza código",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Descartar alterações locais",
+      "content": "git checkout -- .",
+      "category": "git",
+      "alias": "undo",
+      "note": "Remove alterações não commitadas",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Remover arquivo do stage",
+      "content": "git reset arquivo",
+      "category": "git",
+      "alias": "unstage",
+      "note": "Retira arquivo preparado para commit",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Desfazer último commit mantendo arquivos",
+      "content": "git reset --soft HEAD~1",
+      "category": "git",
+      "alias": "undo-commit",
+      "note": "Remove último commit sem perder alterações",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Clonar repositório",
+      "content": "git clone URL_DO_REPOSITORIO",
+      "category": "git",
+      "alias": "clone",
+      "note": "Baixa um repositório remoto",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver usuário Git configurado",
+      "content": "git config --list",
+      "category": "git",
+      "alias": "config",
+      "note": "Mostra configurações atuais do Git",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Configurar usuário Git",
+      "content": "git config --global user.name \"Nome\" && git config --global user.email \"email@dominio.com\"",
+      "category": "git",
+      "alias": "setuser",
+      "note": "Configura usuário global do Git",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver arquivos modificados",
+      "content": "git status --short",
+      "category": "git",
+      "alias": "status-short",
+      "note": "Status resumido dos arquivos",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Buscar alterações sem aplicar",
+      "content": "git fetch --all",
+      "category": "git",
+      "alias": "fetch",
+      "note": "Atualiza referências remotas sem alterar arquivos",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Mesclar branch atual",
+      "content": "git merge nome-da-branch",
+      "category": "git",
+      "alias": "merge",
+      "note": "Faz merge de outra branch",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Ver quem alterou linha",
+      "content": "git blame arquivo",
+      "category": "git",
+      "alias": "blame",
+      "note": "Mostra autor de cada linha do arquivo",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Remover branch local",
+      "content": "git branch -d nome-da-branch",
+      "category": "git",
+      "alias": "deletebranch",
+      "note": "Remove branch local já mesclada",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    },
+    {
+      "title": "Limpar arquivos não rastreados",
+      "content": "git clean -fd",
+      "category": "git",
+      "alias": "clean",
+      "note": "Remove arquivos e pastas não monitorados",
+      "shellTarget": "bash",
+      "createdAt": "2026-07-28T23:50:32.906Z",
+      "updatedAt": "2026-07-28T23:50:32.906Z"
+    }
+  ],
+  "sequences": []
+}
